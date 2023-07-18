@@ -1,0 +1,25 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        
+      - name: Install sshpass
+        run: sudo apt-get update && sudo apt-get install -y sshpass
+
+      - name: Deploy to EC2
+        run: |
+          sshpass -p "${{ secrets.EC2_PASSWORD }}" ssh -o StrictHostKeyChecking=no "${{ secrets.EC2_USERNAME }}"@"${{ secrets.EC2_IP }}" << 'EOF'
+            echo "Executing remote commands..."
+            cd "${{ secrets.PROJECT_LOCATION }}"
+            bash deploy.sh | pv
+            echo "Remote commands executed."
