@@ -20,7 +20,7 @@ from django.urls import path, include, re_path
 from django.views.static import serve
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    # path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
     path('user/', include('apps.user.urls')),
     path('', include('apps.apigateway.urls')),
