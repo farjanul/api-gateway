@@ -19,16 +19,8 @@ Create Microservice `->` Dockerize `->` CI/CD `->` Deploy to AWS EC2
 **Identity Provider:** This handles authentication and authorization for users. It is also quickly deployed and horizontally scaled.
 
 **There are two services for executing our plan:**
-- **API Gateway** - That works for `Identity Provider` and `Routing`.
-  
-  ```
-  https://github.com/farjanul/api-gateway
-  ```
-- **Business Service** - Implementing `business logic` and `API` for business service.
-  
-  ```
-  https://github.com/farjanul/business-service
-  ```
+- [API Gateway Repo](https://github.com/farjanul/api-gateway) - That works for `Identity Provider` and `Routing`. 
+- [Business Service Repo](https://github.com/farjanul/business-service) - Implementing `business logic` and `API` for business service.
 
 ## Built With
 
