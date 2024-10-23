@@ -14,7 +14,7 @@ Create Microservice `->` Dockerize `->` CI/CD `->` Deploy to AWS EC2
 -	Setup CI/CD for auto build and deployment of these services using Github actions and AWS (EC2) hosting service to auto build docker and deploy it when new code changes are committed to GitHub
 
 ## Architecture Flow
-![microservice-architecture](https://www.futurefundamentals.com/wp-content/uploads/2019/06/microservice-architecture-1024x560.png)
+![microservice-architecture](https://vitalflux.com/wp-content/uploads/2018/03/microservices-styled-architecture.png)
 
 **Identity Provider:** This handles authentication and authorization for users. It is also quickly deployed and horizontally scaled.
 
